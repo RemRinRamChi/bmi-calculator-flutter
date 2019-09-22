@@ -1,11 +1,12 @@
 import 'package:bmi_calculator/gender.dart';
-import 'package:bmi_calculator/reusable_card.dart';
-import 'package:bmi_calculator/round_icon_button.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
+import 'package:bmi_calculator/components/round_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'constants.dart';
-import 'gender_icon.dart';
+import '../components/bottom_button.dart';
+import '../constants.dart';
+import '../components/gender_icon.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -187,15 +188,9 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
+          BottomButton(
+            title: 'CALCULATE',
             onTap: () => Navigator.pushNamed(context, '/results'),
-            child: Container(
-              child: Text('CALCULATE'),
-              color: kBottomContainerColour,
-              margin: EdgeInsets.only(top: 10.0),
-              height: kBottomContainerHeight,
-              width: double.infinity,
-            ),
           ),
         ],
       ),
