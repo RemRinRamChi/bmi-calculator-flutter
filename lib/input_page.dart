@@ -83,8 +83,6 @@ class _InputPageState extends State<InputPage> {
                     value: height.toDouble(),
                     min: kMinHeight.toDouble(),
                     max: kMaxHeight.toDouble(),
-                    activeColor: Color(0xFFEB1555),
-                    inactiveColor: Color(0xFF8D8e98),
                     onChanged: (double newValue) {
                       setState(() {
                         height = newValue.round();
