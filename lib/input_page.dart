@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+const Color activeCardColour = Color(0xFF1D1E33);
+const double bottomContainerHeight = 80.0;
+const Color bottomContainerColour = Color(0xFFEB1555);
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
@@ -19,12 +23,12 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0xFF1D1E33),
+                    colour: activeCardColour,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0xFF1D1E33),
+                    colour: activeCardColour,
                   ),
                 ),
               ],
@@ -32,7 +36,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReusableCard(
-              colour: Color(0xFF1D1E33),
+              colour: activeCardColour,
             ),
           ),
           Expanded(
@@ -40,16 +44,22 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0xFF1D1E33),
+                    colour: activeCardColour,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    colour: Color(0xFF1D1E33),
+                    colour: activeCardColour,
                   ),
                 ),
               ],
             ),
+          ),
+          Container(
+            color: bottomContainerColour,
+            margin: EdgeInsets.only(top: 10.0),
+            height: bottomContainerHeight,
+            width: double.infinity,
           ),
         ],
       ),
@@ -58,7 +68,7 @@ class _InputPageState extends State<InputPage> {
 }
 
 class ReusableCard extends StatelessWidget {
-  Color colour;
+  final Color colour;
 
   ReusableCard({@required this.colour});
 
